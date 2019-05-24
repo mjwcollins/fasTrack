@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+//session middleware
 var session = require('express-session');
 var passport = require('passport');
 var logger = require('morgan');
@@ -9,12 +10,16 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+//load the env vars
+require('dotenv').config();
+
 //connect to MongoDB with mongoose
 require('./config/database');
 
 //config passport
 require('./config/passport');
 
+//create the express app
 var app = express();
 
 // view engine setup
