@@ -10,9 +10,11 @@ const userSchema = new Schema({
     timestamps: true
 });
 
-const foodSchema = new mongoose.model.Schema({
+
+
+const foodSchema = new Schema({
     name: String,
-    img: URL,
+    img: String,
     time: String,
     date: Date,
 }, {

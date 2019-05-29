@@ -8,7 +8,7 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.GOOGLE_CALLBACK
 }, function (accessToken,
     refreshToken, profile, cb) {
-        User.findOne({ googleID: profile.id }, function (err, user) {
+        User.findOne({ googleId: profile.id }, function (err, user) {
             if (err) return cb(err);
             if (user) {
                 return cb(null, user);
@@ -16,7 +16,7 @@ passport.use(new GoogleStrategy({
 
                 let newUser = new User({
                     name: profile.displayName,
-                    email: profille.emails[0].value,
+                    email: profile.emails[0].value,
                     googleId: profile.id
                 })
                 newUser.save(function (err) {
@@ -27,3 +27,14 @@ passport.use(new GoogleStrategy({
         });
     }
 ));
+
+passport.serializeUser(function(user, cb) {
+    cb(null, user.id);
+
+});
+
+passport.deserializeUser(function(id, cb) {
+    User.findById(id, function(err, user) {
+        cb(err, user)
+    });
+});
