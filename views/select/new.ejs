@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <%# <a href="" class="brand-logo left">fasTrack</a> %>
+    <div>
+      <h1>fastrakk</h1>
+    </div>
+
+    <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+
+    <!-- new html below -->
+    <form method="POST" action="/select/new">
+      <div class="food">        
+        <label>Food Eaten:</label>
+        <input type="text" name="food">
+      </div>
+    </form>
+  </body>
+</html>

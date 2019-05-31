@@ -6,7 +6,7 @@ const usersController = require('../controllers/users');
 //SOMETHING WRONG HERE GET STATEMENT I THINK
 
 /* GET home page. */
-router.get('/', usersController.index)
+router.get('/', usersController.index);
 
 //google OAuth login route
 router.get('/auth/google', 
@@ -19,7 +19,7 @@ passport.authenticate(
 router.get('/fasTrackOAuth', passport.authenticate(
   'google', 
   {
-    successRedirect : '/', 
+    successRedirect : '/select', 
     failureRedirect : '/'
   }
 ));

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
     name: String,
     email: String,
     googleId: String,
@@ -10,13 +10,8 @@ const userSchema = new Schema({
     timestamps: true
 });
 
-
-
-const foodSchema = new Schema({
-    name: String,
-    img: String,
-    time: String,
-    date: Date,
+const foodSchema = new mongoose.Schema({
+    text: String
 }, {
     timestamp: true,
 });

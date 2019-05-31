@@ -1,8 +1,24 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: "Lucida Grande", Helvetica, Arial, sans-serif;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  /* font-size: 30px; */
+  background-color: rgba(23, 218, 218, 0.9);
+
 }
 
-a {
-  color: #00B7FF;
+h1 {
+  color: #ffffff;
+  /* text-shadow: rgba(46, 75, 191, 0.9); */
+  font-size: 30px;
+}
+
+button {
+  background-color: rgba(180, 0, 180, .9);
+  color: #ffffff;
+  size: 40px;
+  
+
 }
