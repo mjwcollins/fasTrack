@@ -1,9 +1,10 @@
 body {
-  padding: 50px;
+  /* padding: 50px; */
   font: "Lucida Grande", Helvetica, Arial, sans-serif;
   align-content: center;
   justify-content: center;
   text-align: center;
+  max-height: 100px;
   /* font-size: 30px; */
   
 
@@ -22,3 +23,4 @@ button {
   
 
 }
+
